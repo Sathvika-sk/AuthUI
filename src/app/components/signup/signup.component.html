@@ -1,0 +1,77 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
+    </head>
+
+    <body>
+        <div class="total">
+            <div class="outer">
+                
+                <div class="container" name="logcontainer">
+                <form [formGroup]="signupForm">
+                    <!-- Email input -->
+                    <div class="form-outline mb-4">
+                        <div class="input-field" [class.error]="signupForm.controls['name'].dirty && signupForm.hasError('required','name')">
+                            <label class="form-label" for="form2Example1">Name</label>
+                            <input formControlName="name" type="name" id="form2Example1" class="form-control" placeholder="Enter your Name"/>
+                        </div>
+                        <small *ngIf="signupForm.controls['email'].dirty && signupForm.hasError('required','email')" class="text-danger"> *Name is required</small>
+                    </div>
+                    
+                    <div class="form-outline mb-4">
+                        <div class="input-field" [class.error]="signupForm.controls['email'].dirty && signupForm.hasError('required','email')">
+                            <label class="form-label" for="form2Example2">Email address</label>
+                            <input formControlName="email" type="email" id="form2Example2" class="form-control" placeholder="Enter your Email address"/>
+                        </div>
+                        <small *ngIf="signupForm.controls['email'].dirty && signupForm.hasError('required','email')" class="text-danger"> *Email is required</small>
+                    </div>
+                    <div class="form-outline mb-4">
+                        <div class="input-field" [class.error]="signupForm.controls['phone'].dirty && signupForm.hasError('required','phone')">
+                            <label class="form-label" for="form2Example3">Phone Number</label>
+                            <input formControlName="phone" type="phone" id="form2Example3" class="form-control" placeholder="Enter your Phone Number"/>
+                        </div>
+                        <small *ngIf="signupForm.controls['phone'].dirty && signupForm.hasError('required','phone')" class="text-danger"> *Phone is required</small>
+                    </div>
+                    <div class="form-outline mb-4">
+                        <div class="input-field" [class.error]="signupForm.controls['salary'].dirty && signupForm.hasError('required','salary')">
+                            <label class="form-label" for="form2Example4">Salary</label>
+                            <input formControlName="salary" type="salary" id="form2Example4" class="form-control" placeholder="Enter your Salary"/>
+                        </div>
+                        <small *ngIf="signupForm.controls['salary'].dirty && signupForm.hasError('required','salary')" class="text-danger"> *Salary is required</small>
+                    </div>
+                    <div class="form-outline mb-4">
+                        <div class="input-field" [class.error]="signupForm.controls['department'].dirty && signupForm.hasError('required','department')">
+                            <label class="form-label" for="form2Example5">Department</label>
+                            <input formControlName="department" type="department" id="form2Example5" class="form-control" placeholder="Enter your department"/>
+                        </div>
+                        <small *ngIf="signupForm.controls['department'].dirty && signupForm.hasError('required','department')" class="text-danger"> *Department is required</small>
+                    </div>
+                    
+                    <!-- Password input -->
+                    <div class="form-outline mb-4">
+                        <div class="input-field" [class.error]="signupForm.controls['password'].dirty && signupForm.hasError('required','password')">
+                            <label class="form-label" for="form2Example6">Password</label>
+                            <input formControlName="password" type="password" id="form2Example6" class="form-control" placeholder="Enter your Password" />
+                        </div>
+                        <small *ngIf="signupForm.controls['password'].dirty && signupForm.hasError('required','password')" class="text-danger"> *Password is required</small>
+                    </div>
+                    
+                    
+                    <!-- Submit button -->
+                    <button (click)="onSignup()" type="button" class="btn btn-primary btn-block mb-4">Sign in</button>
+                    
+                    <!-- Register buttons -->
+                    <div class="text-center">
+                        <p>Already a user? <a href="login">login</a></p>
+                    </div>
+                </form>
+                </div>
+            </div>
+        </div>
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.3/dist/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+        
+    </body>
+</html>

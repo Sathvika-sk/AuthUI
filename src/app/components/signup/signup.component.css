@@ -1,0 +1,27 @@
+
+        /*body {
+            background-color: linear-gradient(#1b12af, #00d2fd); /* Set your desired background color */
+            .total{
+                background-image: linear-gradient(#1b12af, #00d2fd)
+            }
+    
+            .outer {
+                background-color: linear-gradient();;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                height: 100vh;
+            }
+    
+            .container[name="logcontainer"] {
+                 /* Set your desired background color for the login container */
+                border-radius: 10px; /* Optional: Add rounded corners */
+                background-color: aliceblue;
+                padding: 70px; 
+                box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Optional: Add box shadow */
+                margin: 20px; /* Set your desired margin */
+                height: 100%;
+                width: 50%;
+            }
+    
+    
